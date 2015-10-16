@@ -11,4 +11,4 @@ class BaseTest(TestCase):
         self.driver.get(self.url)
 
     def tearDown(self):
-        self.driver.close()
+        self.driver.quit()
