@@ -23,11 +23,8 @@ class ActionBot:
                 self.driver = None
 
             self.driver.maximize_window()
-
             self.driver.delete_all_cookies()
-
-            self.implicitly_wait(2)
-
+            self.implicitly_wait(5)
             self.set_page_load_timeout(5)
             print(GM.SELECTED_OPENED)
 

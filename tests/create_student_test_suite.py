@@ -8,3 +8,4 @@ class CreateStudentTestSuite(BaseTest):
 
     def test_layout(self):
         create_student_page = CreateStudentPage(self.driver)
+        self.assertTrue(create_student_page.is_title_displayed(), GM.ERROR_CREATE_STUDENT_PAGE)
