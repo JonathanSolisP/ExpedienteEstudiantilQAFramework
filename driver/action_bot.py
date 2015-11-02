@@ -1,4 +1,5 @@
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.support.select import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
@@ -72,6 +73,10 @@ class ActionBot:
     def get_element_text(self, by, value):
         we = self.find_element(by, value)
         return we.get_attribute('text')
+
+    def set_combo_option(self, by, value, option):
+        we = Select(self.find_element(by, value))
+        we.select_by_visible_text(option)
 
     # WAIT METHODS
 

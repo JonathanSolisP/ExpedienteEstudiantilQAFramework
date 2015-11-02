@@ -11,4 +11,5 @@ class CreateStudentTestSuite(BaseTest):
         create_student_page = CreateStudentPage(self.driver)
         self.assertTrue(create_student_page.is_title_displayed(), GM.ERROR_CREATE_STUDENT_PAGE)
         create_student_page.enter_name("Hola mundo")
+        create_student_page.select_gender("Femenino")
         time.sleep(5)
