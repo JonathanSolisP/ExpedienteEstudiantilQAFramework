@@ -27,5 +27,13 @@ class GlobalConfigsMessages():
     ERROR_HOME_PAGE = "Home page was NOT displayed"
     ERROR_CREATE_STUDENT_PAGE = "Create student page was NOT displayed"
 
+
+    #Login
     MISSING_CREDENTIALS_ERROR_MSG = "Missing credentials"
     UKNOWN_USER_OR_INVALID_PASSWORD_ERROR_MSG = "Unknown user or invalid password"
+
+    #Restore your password.
+    USERNAME_FIELD_BLANK_ERROR_MSG = "Username field must not be blank"
+    NO_ACCOUNT_FOUND_WITH_THAT_USERNAME_ERROR_MSG = "No account with that username has been found"
+
+
