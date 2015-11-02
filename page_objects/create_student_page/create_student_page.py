@@ -7,6 +7,7 @@ class CreateStudentLocators:
         pass
 
     TITLE = "Expediente Estudiantil - Development Environment"
+    HEADER = (By.XPATH, "//div[@class='page-header']/h1")
     NAME_INPUT = (By.ID, "name")
     FIRST_LAST_NAME_INPUT = (By.ID, "primer_apellido")
     SECOND_LAST_NAME_INPUT = (By.ID, "segundo_apellido")
@@ -25,7 +26,7 @@ class CreateStudentLocators:
     GRADUATED_CHECKBOX = (By.NAME, "graduado")
     MEANINGFUL_ADEQUACY_COMBO = (By.ID, "adecuacion_significativa")
     NOT_MEANINGFUL_ADEQUACY_COMBO = (By.ID, "adecuacion_nsignificativa")
-    CREATE_STUDENT_BUTTON = (By.CLASS_NAME, "btn btn-primary align-field")
+    CREATE_STUDENT_BUTTON = (By.CLASS_NAME, "btn-primary")
 
 
 class CreateStudentPage:
@@ -34,6 +35,9 @@ class CreateStudentPage:
 
     def is_title_displayed(self):
         return self.driver.wait_for_title_contains(CreateStudentLocators.TITLE, 30)
+
+    def is_header_displayed(self):
+        return self.driver.wait_for_element_present(CreateStudentLocators.HEADER[0], CreateStudentLocators.HEADER[1], 30) is not None
 
     def enter_name(self, name):
         self.driver.send_keys(CreateStudentLocators.NAME_INPUT[0], CreateStudentLocators.NAME_INPUT[1], name)
@@ -90,7 +94,7 @@ class CreateStudentPage:
         self.driver.set_combo_option(CreateStudentLocators.NOT_MEANINGFUL_ADEQUACY_COMBO[0], CreateStudentLocators.NOT_MEANINGFUL_ADEQUACY_COMBO[1], adequacy)
 
     def click_create_student(self):
-        self.driver.click(CreateStudentLocators.CREATE_STUDENT_BUTTON[0], CreateStudentLocators[1])
+        self.driver.click(CreateStudentLocators.CREATE_STUDENT_BUTTON[0], CreateStudentLocators.CREATE_STUDENT_BUTTON[1])
 
 
 

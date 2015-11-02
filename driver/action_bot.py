@@ -72,7 +72,10 @@ class ActionBot:
 
     def get_element_text(self, by, value):
         we = self.find_element(by, value)
-        return we.get_attribute('text')
+        return we.text
+        #return we.get_attribute('text') CHECK THIS
+
+
 
     def set_combo_option(self, by, value, option):
         we = Select(self.find_element(by, value))
@@ -89,7 +92,8 @@ class ActionBot:
     def wait_for_element_present(self, by, value, seconds):
         try:
             element = WebDriverWait(self.driver, seconds).until(
-                EC.presence_of_element_located(by, value))
+                EC.presence_of_element_located((by, value))
+            )
         except TimeoutException:
             element = None
         return element

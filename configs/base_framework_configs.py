@@ -6,8 +6,15 @@ class GlobalConfigs():
     URL = "http://localhost:3000/#!/signin"
     BROWSER = "chrome"
 
-    STUDENT_NAME = "Jonathan"
-    STUDENT_FIRST_LAST_NAME = "Solis"
+    NAME = "Jonathan"
+    FIRST_LAST_NAME = "Solis"
+    SECOND_LAST_NAME = "Parajeles"
+    BIRTHDAY = "01/04/1994"
+    ID_NUMBER = "207320402"
+    GENDER = "Masculino"
+    PHONE_NUMBER = "24695072"
+    CELL_PHONE_NUMBER = "86255423"
+
 
     USERNAME = "ranguro"
     PASSWORD = "ranguro"
