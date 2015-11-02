@@ -94,6 +94,14 @@ class ActionBot:
             element = None
         return element
 
+    def wait_for_element_visible(self, by, value, seconds):
+        try:
+            element = WebDriverWait(self.driver, seconds).until(
+                EC.visibility_of_element_located((by, value)))
+        except TimeoutException:
+            element = None
+        return element
+
     def wait_for_title_present(self, title, seconds):
         try:
             is_present = WebDriverWait(self.driver, seconds).until(
