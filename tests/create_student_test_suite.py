@@ -15,10 +15,7 @@ class CreateStudentTestSuite(BaseTest):
         home_page.select_create_student_option()
         self.assertTrue(home_page.is_title_displayed(), GM.ERROR_HOME_PAGE)
 
-    def test_layout(self):
+    def test_create_student_layout(self):
         self.go_to_page()
         create_student_page = CreateStudentPage(self.driver)
-        self.assertTrue(create_student_page.is_title_displayed(), GM.ERROR_CREATE_STUDENT_PAGE)
-        create_student_page.enter_name("Hola mundo")
-        create_student_page.select_gender("Femenino")
-        time.sleep(5)
+        self.assertTrue(create_student_page.is_header_displayed(), GM.ERROR_CREATE_STUDENT_PAGE)
