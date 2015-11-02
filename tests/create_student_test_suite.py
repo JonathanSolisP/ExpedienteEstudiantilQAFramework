@@ -19,3 +19,9 @@ class CreateStudentTestSuite(BaseTest):
         self.go_to_page()
         create_student_page = CreateStudentPage(self.driver)
         self.assertTrue(create_student_page.is_header_displayed(), GM.ERROR_CREATE_STUDENT_PAGE)
+
+    def test_create_student_empty_fields(self):
+        self.go_to_page()
+        create_student_page = CreateStudentPage(self.driver)
+        create_student_page.click_create_student()
+        self.assertTrue(create_student_page.is_header_displayed(), GM.ERROR_CREATE_STUDENT_PAGE)
