@@ -38,6 +38,9 @@ class GlobalConfigsMessages():
     ERROR_HOME_PAGE = "Home page was NOT displayed"
     ERROR_CREATE_STUDENT_PAGE = "Create student page was NOT displayed"
 
+    #Create Student
+    ERROR_CREATE_STUDENT_PAGE_INVALID_DATA = "The respective message was NOT displayed"
+    ERROR_CREATE_STUDENT_PAGE_SUBMIT = "A problem occurred inserting the student"
     MISSING_ERROR_MSG = "An error message was not diplayed"
 
     HEADER_NOT_DISPLAYED = "The header was not display when submitting the form"
