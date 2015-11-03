@@ -22,6 +22,7 @@ class CreateStudentLocators:
     DISTRICT_COMBO = (By.ID, "distrito")
     NEIGHBORHOOD_INPUT = (By.ID, "barrio")
     ADDRESS_INPUT = (By.ID, "direccion_exacta")
+    HIGH_SCHOOL_INPUT = (By.ID, "colegio_procedencia")
     INCOME_YEAR_INPUT = (By.ID, "anno_ingreso")
     GRADUATED_CHECKBOX = (By.NAME, "graduado")
     MEANINGFUL_ADEQUACY_COMBO = (By.ID, "adecuacion_significativa")
@@ -80,6 +81,9 @@ class CreateStudentPage:
 
     def enter_address(self, address):
         self.driver.send_keys(CreateStudentLocators.ADDRESS_INPUT[0], CreateStudentLocators.ADDRESS_INPUT[1], address)
+
+    def enter_high_school(self, high_school):
+        self.driver.send_keys(CreateStudentLocators.HIGH_SCHOOL_INPUT[0], CreateStudentLocators.HIGH_SCHOOL_INPUT[1], high_school)
 
     def enter_income_year(self, income_year):
         self.driver.send_keys(CreateStudentLocators.INCOME_YEAR_INPUT[0], CreateStudentLocators.INCOME_YEAR_INPUT[1], income_year)

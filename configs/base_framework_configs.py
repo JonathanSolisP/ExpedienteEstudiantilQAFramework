@@ -3,7 +3,7 @@ __author__ = 'Proyecto'
 
 class GlobalConfigs():
     BASE_URL = "https://localhost:3000"
-    URL = "http://localhost:3000/#!/signin"
+    URL = "http://172.24.28.21:3000/#!/"
     BROWSER = "chrome"
 
     NAME = "Jonathan"
@@ -14,6 +14,17 @@ class GlobalConfigs():
     GENDER = "Masculino"
     PHONE_NUMBER = "24695072"
     CELL_PHONE_NUMBER = "86255423"
+    EMAIL = "jonathansolis@outlook.com"
+    PROVINCE = "Alajuela"
+    CANTON = "San Carlos"
+    DISTRICT = "Cutris"
+    NEIGHBORHOOD = "Terron Colorado"
+    ADDRESS = "200 mts norte del puente del Rio San Carlos"
+    HIGH_SCHOOL = "Liceo Boca de Arenal"
+    INCOME_YEAR = "2015"
+    MEANINGFUL_ADEQUACY = "No tiene"
+    NOT_MEANINGFUL_ADEQUACY = "No tiene"
+
 
 
     USERNAME = "ranguro"
