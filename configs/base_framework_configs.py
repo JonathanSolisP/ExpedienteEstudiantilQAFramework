@@ -14,6 +14,17 @@ class GlobalConfigs():
     GENDER = "Masculino"
     PHONE_NUMBER = "24695072"
     CELL_PHONE_NUMBER = "86255423"
+    EMAIL = "jonathansolis@outlook.com"
+    PROVINCE = "Alajuela"
+    CANTON = "San Carlos"
+    DISTRICT = "Cutris"
+    NEIGHBORHOOD = "Terron Colorado"
+    ADDRESS = "200 mts norte del puente del Rio San Carlos"
+    HIGH_SCHOOL = "Liceo Boca de Arenal"
+    INCOME_YEAR = "2015"
+    MEANINGFUL_ADEQUACY = "No tiene"
+    NOT_MEANINGFUL_ADEQUACY = "No tiene"
+
 
 
     USERNAME = "ranguro"

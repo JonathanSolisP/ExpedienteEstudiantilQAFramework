@@ -59,6 +59,3 @@ class HomePage:
 
     def click_sign_in(self):
         self.driver.click_from_elements(HomeLocators.SIGN_IN_TAB[0], HomeLocators.SIGN_IN_TAB[1], HomeLocators.SIGN_IN_TAB[2])
-
-    def prueba(self):
-        return self.driver.find_elements(HomeLocators.SIGN_UP_TAB[0], HomeLocators.SIGN_UP_TAB[1])
