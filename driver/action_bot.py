@@ -54,6 +54,10 @@ class ActionBot:
         we = self.find_element(by, value)
         we.click()
 
+    def click_from_elements(self, by, value, index):
+        we = self.find_elements(by, value)
+        we[index].click()
+
     def get_attribute(self, by, value, attribute):
         we = self.find_element(by, value)
         we.get_attribute(attribute)
@@ -74,8 +78,6 @@ class ActionBot:
         we = self.find_element(by, value)
         return we.text
         #return we.get_attribute('text') CHECK THIS
-
-
 
     def set_combo_option(self, by, value, option):
         we = Select(self.find_element(by, value))

@@ -7,7 +7,7 @@ class HomeLocators:
         pass
 
     TITLE = "Expediente Estudiantil - Development Environment"
-    STUDENT_TAB = (By.CLASS_NAME, "dropdown-toggle")
+    STUDENT_TAB = (By.CLASS_NAME, "dropdown-toggle", 0)
     CREATE_STUDENT_TAB = (By.CSS_SELECTOR, "a.ng-binding")
 
 
@@ -22,4 +22,4 @@ class HomePage:
         self.driver.click(HomeLocators.STUDENT_TAB[0], HomeLocators.STUDENT_TAB[1])
 
     def select_create_student_option(self):
-        self.driver.click(HomeLocators.CREATE_STUDENT_TAB[0], HomeLocators.CREATE_STUDENT_TAB[1])
+        self.driver.click_from_elements(HomeLocators.CREATE_STUDENT_TAB[0], HomeLocators.CREATE_STUDENT_TAB[1], HomeLocators.CREATE_STUDENT_TAB[2])
