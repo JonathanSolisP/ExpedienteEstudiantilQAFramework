@@ -6,7 +6,6 @@ from configs.base_framework_configs import GlobalConfigs as GC
 from configs.base_framework_configs import GlobalConfigsMessages as GM
 import time
 
-
 class CreateStudentTestSuite(BaseTest):
 
     def go_to_page(self):
@@ -25,3 +24,11 @@ class CreateStudentTestSuite(BaseTest):
         create_student_page = CreateStudentPage(self.driver)
         create_student_page.click_create_student()
         self.assertTrue(create_student_page.is_header_displayed(), GM.ERROR_CREATE_STUDENT_PAGE)
+
+    def test_just_for_testing_tests(self):
+        home_page = HomePage(self.driver)
+        home_page.click_sign_in()
+        time.sleep(2)
+        """home_page.click_student_tab()
+        home_page.select_reports_student_tab()
+        time.sleep(1)"""

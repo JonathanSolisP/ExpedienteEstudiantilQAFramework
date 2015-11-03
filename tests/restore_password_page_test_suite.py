@@ -20,7 +20,6 @@ class RestorePasswordPageTest(BaseTest):
         restore_password_page.click_submit_button()
         self.assertTrue(restore_password_page.is_submit_username_error_displayed(), GM.NO_ACCOUNT_FOUND_WITH_THAT_USERNAME_ERROR_MSG)
 
-##!
     def restore_password_valid_username(self):
         restore_password_page = RestorePasswordPage(self.driver)
         restore_password_page.enter_username(GC.USERNAME)
