@@ -3,7 +3,7 @@ __author__ = 'Proyecto'
 
 class GlobalConfigs():
     BASE_URL = "https://localhost:3000"
-    URL = "http://172.24.28.21:3000/#!/"
+    URL = "http://localhost:3000/#!/signin"
     BROWSER = "chrome"
 
     NAME = "Jonathan"
@@ -16,8 +16,24 @@ class GlobalConfigs():
     CELL_PHONE_NUMBER = "86255423"
 
 
+    USERNAME = "ranguro"
+    PASSWORD = "ranguro"
+
+    USER_NAME = "Randall Gonzalez"
+
 class GlobalConfigsMessages():
     SELECTED_BROWSER = "Selected browser: "
     SELECTED_OPENED = "The browser has been opened"
     ERROR_HOME_PAGE = "Home page was NOT displayed"
     ERROR_CREATE_STUDENT_PAGE = "Create student page was NOT displayed"
+
+
+    #Login
+    MISSING_CREDENTIALS_ERROR_MSG = "Missing credentials"
+    UKNOWN_USER_OR_INVALID_PASSWORD_ERROR_MSG = "Unknown user or invalid password"
+
+    #Restore your password.
+    USERNAME_FIELD_BLANK_ERROR_MSG = "Username field must not be blank"
+    NO_ACCOUNT_FOUND_WITH_THAT_USERNAME_ERROR_MSG = "No account with that username has been found"
+
+

@@ -7,8 +7,10 @@ class HomeLocators:
         pass
 
     TITLE = "Expediente Estudiantil - Development Environment"
-    STUDENT_TAB = (By.CLASS_NAME, "dropdown-toggle", 0)
-    CREATE_STUDENT_TAB = (By.CSS_SELECTOR, "a.ng-binding")
+    SLOGAN = "Ser mejores, para servir mejor a Costa Rica"
+    USERNAME = (By.XPATH, "/html/body/header/div/nav/ul[3]/li/a/span")
+    STUDENT_TAB = (By.CLASS_NAME, "dropdown-toggle")
+    CREATE_STUDENT_TAB = (By.CSS_SELECTOR, "a.ng-binding", 0)
 
 
 class HomePage:
@@ -17,6 +19,9 @@ class HomePage:
 
     def is_title_displayed(self):
         return self.driver.wait_for_title_contains(HomeLocators.TITLE, 30)
+
+    def is_user_name_displayed(self,):
+        return self.driver.wait_for_element_visible(HomeLocators.USERNAME[0], HomeLocators.USERNAME[1], 30)
 
     def click_student_tab(self):
         self.driver.click(HomeLocators.STUDENT_TAB[0], HomeLocators.STUDENT_TAB[1])
