@@ -32,5 +32,8 @@ class LoginPage:
     def click_sign_in_button(self):
         self.driver.click(*LoginLocators.SIGN_IN_BUTTON)
 
+    def is_sign_error_message_equals_to(self, error):
+        return self.driver.get_element_text(LoginLocators.USERNAME_INPUT[0], LoginLocators.USERNAME_INPUT[1]) is not error
+
     def is_sign_in_error_message_displayed(self):
         return self.driver.wait_for_element_visible(LoginLocators.SIGN_IN_ERROR_MSG[0], LoginLocators.SIGN_IN_ERROR_MSG[1], 30)

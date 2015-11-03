@@ -41,13 +41,8 @@ class GlobalConfigsMessages():
     #Create Student
     ERROR_CREATE_STUDENT_PAGE_INVALID_DATA = "The respective message was NOT displayed"
     ERROR_CREATE_STUDENT_PAGE_SUBMIT = "A problem occurred inserting the student"
+    MISSING_ERROR_MSG = "An error message was not diplayed"
 
-    #Login
-    MISSING_CREDENTIALS_ERROR_MSG = "Missing credentials"
-    UKNOWN_USER_OR_INVALID_PASSWORD_ERROR_MSG = "Unknown user or invalid password"
-
-    #Restore your password.
-    USERNAME_FIELD_BLANK_ERROR_MSG = "Username field must not be blank"
-    NO_ACCOUNT_FOUND_WITH_THAT_USERNAME_ERROR_MSG = "No account with that username has been found"
+    HEADER_NOT_DISPLAYED = "The header was not display when submitting the form"
 
 
