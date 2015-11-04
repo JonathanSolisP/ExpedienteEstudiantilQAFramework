@@ -10,7 +10,7 @@ __author__ = 'Proyecto'
 class AddResponsibleOfStudentTestSuite(BaseTest):
 
 
-    def gotoResponsibleOfStudentPage(self):
+    def go_to_reponsible_of_student_page(self):
         home_page = HomePage(self.driver)
         home_page.click_sign_in()
         login_page = LoginPage(self.driver)

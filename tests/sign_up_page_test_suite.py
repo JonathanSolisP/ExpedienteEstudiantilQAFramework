@@ -10,13 +10,19 @@ __author__ = 'Proyecto'
 
 class SignUpPageTest(BaseTest):
 
+    def go_to_sign_up_page(self):
+        home_page = HomePage(self.driver)
+        home_page.click_sign_up()
+
     def test_sign_up_empty_fields(self):
+        self.go_to_sign_up_page()
         sign_up_page = SignUpPage(self.driver)
         sign_up_page.click_sign_up_button()
         self.assertTrue(sign_up_page.is_sign_up_error_message_display(), GM.MISSING_ERROR_MSG)
 
 
     def test_sign_up_successful(self):
+        self.go_to_sign_up_page()
         sign_up_page = SignUpPage(self.driver)
         sign_up_page.enter_first_name("Josue")
         sign_up_page.enter_last_name("Morales")
@@ -28,6 +34,7 @@ class SignUpPageTest(BaseTest):
         self.assertTrue(home_page.is_user_name_displayed(),GM.ERROR_USER_NOT_DISPLAYED)
 
     def test_sign_up_existing_user(self):
+        self.go_to_sign_up_page()
         sign_up_page = SignUpPage(self.driver)
         sign_up_page.enter_first_name("Josue")
         sign_up_page.enter_last_name("Morales")
