@@ -1,12 +1,24 @@
 from base.base_test import BaseTest
 from page_objects.add_responsible_of_student_page.add_responsible_of_student_page import AddResponsibleOfStudentPage
-
+from page_objects.home_page.home_page import HomePage
+from page_objects.login_page.login_page import LoginPage
+from configs.base_framework_configs import GlobalConfigsMessages as GM
+from configs.base_framework_configs import GlobalConfigs as GC
 __author__ = 'Proyecto'
 
-from configs.base_framework_configs import GlobalConfigsMessages as GM
 
 class AddResponsibleOfStudentTestSuite(BaseTest):
 
+
+    def gotoResponsibleOfStudentPage(self):
+        home_page = HomePage(self.driver)
+        home_page.click_sign_in()
+        login_page = LoginPage(self.driver)
+        login_page.enter_username(GC.USERNAME)
+        login_page.enter_password(GC.PASSWORD)
+        login_page.click_sign_in_button()
+        home_page.is_user_name_displayed()
+        home_page.select_display_admitted_student_option()
 
 
     def test_add_responsible_student_successful(self):
