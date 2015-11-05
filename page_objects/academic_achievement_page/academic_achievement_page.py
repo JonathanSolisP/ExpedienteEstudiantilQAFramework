@@ -14,7 +14,10 @@ class AcademicAchievementsLocators:
     DESCRIPTION_INPUT = (By.ID, "descripcion")
     AWARD_INPUT = (By.ID, "premio")
     ERROR_MSG = (By.CLASS_NAME, "text-danger")
-    ACADEMIC_ACHIEVEMENT_BUTTON = (By.ID, "btn_agregar_logro")
+    ADD_ACADEMIC_ACHIEVEMENT_BUTTON = (By.XPATH, "/html/body/section/section/section/section/div[2]/form/fieldset/div[2]/input")
+    DELETE_ACADEMIC_ACHIEVEMENT_BUTTON = (By.XPATH, "/html/body/section/section/section/section/div[2]/a[2]")
+    HEADER_ACADEMIC_ACHIEVEMENT_BUTTON = (By.XPATH, "/html/body/section/section/section/section/div[1]/h1")
+
 
 
 class AcademicAchievementPage:
@@ -34,7 +37,10 @@ class AcademicAchievementPage:
         self.driver.send_keys(AcademicAchievementsLocators.AWARD_INPUT[0], AcademicAchievementsLocators.AWARD_INPUT[1], award)
 
     def click_academic_achievement_button(self):
-        self.driver.click(*AcademicAchievementsLocators.ACADEMIC_ACHIEVEMENT_BUTTON)
+        self.driver.click(*AcademicAchievementsLocators.ADD_ACADEMIC_ACHIEVEMENT_BUTTON)
+
+    def click_delete_academic_achievement_button(self):
+        self.driver.click(*AcademicAchievementsLocators.DELETE_ACADEMIC_ACHIEVEMENT_BUTTON)
 
     def is_error_message_displayed(self):
         return self.driver.wait_for_element_visible(AcademicAchievementsLocators.ERROR_MSG[0], AcademicAchievementsLocators.ERROR_MSG[1], 30)
