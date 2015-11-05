@@ -14,7 +14,7 @@ class AcademicAchievementsLocators:
     DESCRIPTION_INPUT = (By.ID, "descripcion")
     AWARD_INPUT = (By.ID, "premio")
     ERROR_MSG = (By.CLASS_NAME, "text-danger")
-    ACADEMIC_ACHIEVEMENT_BUTTON = (By.ID, "btn_agregar_logro")
+    ACADEMIC_ACHIEVEMENT_BUTTON = (By.XPATH, "/html/body/section/section/section/section/div[2]/form/fieldset/div[2]/input")
 
 
 class AcademicAchievementPage:
