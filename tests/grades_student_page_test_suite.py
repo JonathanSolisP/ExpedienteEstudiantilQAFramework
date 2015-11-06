@@ -6,6 +6,7 @@ from page_objects.home_page.home_page import HomePage
 from page_objects.login_page.login_page import LoginPage
 from page_objects.view_student_page.view_student_page import ViewStudentPage
 from configs.base_framework_configs import GlobalConfigs as GC
+import time
 
 
 class AddAcademicAchievementStudent(BaseTest):
@@ -24,6 +25,10 @@ class AddAcademicAchievementStudent(BaseTest):
         my_url = "http://172.24.28.21:3000/#!/estudiantes/56392245bf6ad92638c8a0d6/notas_c_c"
         self.driver.get(my_url)
         assign_grades_student_page = GradesStudentPage(self.driver)
-        assign_grades_student_page.enter_grade(101)
-        assign_grades_student_page.is_ngCellText_color()
-        self.assertEquals(assign_grades_student_page.is_ngCellText_color(), "ngCellText ng-binding")
+        assign_grades_student_page.click_ngCellText()
+        #assign_grades_student_page.enter_grade(101)
+        #assign_grades_student_page.is_ngCellText_color()
+
+        #self.assertEquals(assign_grades_student_page.is_ngCellText_color(), "ngCellText ng-binding")
+
+        time.sleep(5)

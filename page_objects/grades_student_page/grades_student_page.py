@@ -30,6 +30,9 @@ class GradesStudentPage:
                                   'class')
         return attribute
 
+    def click_ngCellText(self):
+        self.driver.click(*GradesStudentLocators.SPANISH_TENTH_NCELLTEXT)
+
     def click_assign_grades_student_button(self):
         self.driver.click(*GradesStudentLocators.ASSIGN_GRADES_STUDENT_BUTTON)
 
