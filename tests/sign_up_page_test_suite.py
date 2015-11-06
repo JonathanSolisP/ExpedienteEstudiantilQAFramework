@@ -1,11 +1,11 @@
 from base.base_test import BaseTest
 from page_objects.home_page.home_page import HomePage
-from page_objects.restore_password_page.restore_password_page import RestorePasswordPage
-from configs.base_framework_configs import GlobalConfigs as GC
 from configs.base_framework_configs import GlobalConfigsMessages as GM
 from page_objects.sign_up_page.sign_up_page import SignUpPage
 
 __author__ = 'Proyecto'
+
+
 
 
 class SignUpPageTest(BaseTest):

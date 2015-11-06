@@ -7,7 +7,6 @@ __author__ = 'Proyecto'
 
 class RestorePasswordPageTest(BaseTest):
 
-
     def test_restore_password_empty_username(self):
         restore_password_page = RestorePasswordPage(self.driver)
         restore_password_page.enter_username("")
@@ -24,4 +23,5 @@ class RestorePasswordPageTest(BaseTest):
         restore_password_page = RestorePasswordPage(self.driver)
         restore_password_page.enter_username(GC.USERNAME)
         restore_password_page.click_submit_button()
+
 

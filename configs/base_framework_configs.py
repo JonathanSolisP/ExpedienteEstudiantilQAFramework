@@ -25,8 +25,6 @@ class GlobalConfigs():
     MEANINGFUL_ADEQUACY = "No tiene"
     NOT_MEANINGFUL_ADEQUACY = "No tiene"
 
-
-
     USERNAME = "ranguro"
     PASSWORD = "ranguro"
 
