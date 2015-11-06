@@ -15,6 +15,7 @@ class AddResponsibleOfStudentLocators:
     FIRST_SURNAME = (By.ID, "primer_apellido")
     SECOND_SURNAME = (By.ID, "segundo_apellido")
     IDENTIFICATION = (By.ID, "cedula")
+    RELATIONSHIP = (By.ID, "parentesco")
     JOB = (By.ID, "ocupacion")
     MARITAL_STATUS = (By.ID, "estado_civil")
     NATIONALITY = (By.ID, "nacionalidad")
@@ -22,7 +23,7 @@ class AddResponsibleOfStudentLocators:
     EMAIL = (By.ID, "correo")
     ADDRESS = (By.ID, "direccion")
     ADD_RESPONSIBLE_BUTTON = (By.XPATH, "/html/body/section/section/section/section/div[2]/form/fieldset/div[2]/input")
-    ADD_REPONSIBLE_ERROR_MSG = (By.XPATH, "/html/body/section/section/section/section/div[2]/form/fieldset/div[3]/strong")
+    ADD_RESPONSIBLE_ERROR_MSG = (By.XPATH, "/html/body/section/section/section/section/div[2]/form/fieldset/div[3]/strong")
 
 
 
@@ -33,6 +34,10 @@ class AddResponsibleOfStudentPage:
     def is_header_displayed(self):
         return self.driver.wait_for_element_visible(AddResponsibleOfStudentLocators.PAGE_HEADER[0], AddResponsibleOfStudentLocators.PAGE_HEADER[1], 30)
 
+    def is_add_responsible_error_displayed(self):
+        return self.driver.wait_for_element_visible(AddResponsibleOfStudentLocators.ADD_RESPONSIBLE_ERROR_MSG[0], AddResponsibleOfStudentLocators.ADD_RESPONSIBLE_ERROR_MSG[1], 30)
+
+
     def enter_firstname(self, firstname):
         self.driver.send_keys(AddResponsibleOfStudentLocators.FIRST_NAME[0], AddResponsibleOfStudentLocators.FIRST_NAME[1], firstname)
 
@@ -42,8 +47,11 @@ class AddResponsibleOfStudentPage:
     def enter_second_surname(self, second_surname):
         self.driver.send_keys(AddResponsibleOfStudentLocators.SECOND_SURNAME[0], AddResponsibleOfStudentLocators.SECOND_SURNAME[1], second_surname)
 
-    def enter_identification(self, job):
-        self.driver.send_keys(AddResponsibleOfStudentLocators[0], AddResponsibleOfStudentLocators.JOB[1], job)
+    def enter_identification(self, identification):
+        self.driver.send_keys(AddResponsibleOfStudentLocators.IDENTIFICATION[0], AddResponsibleOfStudentLocators.IDENTIFICATION[1], identification)
+
+    def select_relationship(self, relationship):
+        self.driver.set_combo_option(AddResponsibleOfStudentLocators.RELATIONSHIP[0], AddResponsibleOfStudentLocators.RELATIONSHIP[1], relationship)
 
     def enter_job(self, job):
         self.driver.send_keys(AddResponsibleOfStudentLocators.JOB[0], AddResponsibleOfStudentLocators.JOB[1], job)
@@ -67,6 +75,6 @@ class AddResponsibleOfStudentPage:
         self.driver.click(*AddResponsibleOfStudentLocators.ADD_RESPONSIBLE_BUTTON)
 
     def is_add_responsible_of_student_error_displayed(self):
-        return self.driver.wait_for_element_visible(AddResponsibleOfStudentLocators.ADD_REPONSIBLE_ERROR_MSG[0], AddResponsibleOfStudentLocators.ADD_REPONSIBLE_ERROR_MSG[1], 30)
+        return self.driver.wait_for_element_visible(AddResponsibleOfStudentLocators.ADD_RESPONSIBLE_ERROR_MSG[0], AddResponsibleOfStudentLocators.ADD_RESPONSIBLE_ERROR_MSG[1], 30)
 
 
