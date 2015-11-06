@@ -27,6 +27,9 @@ class QueryStudentsPage:
     def is_header_displayed(self):
         return self.driver.wait_for_element_visible(QueryStudentsLocators.HEADER[0], QueryStudentsLocators.HEADER[1], 30) is not None
 
+    def is_content_correct(self):
+        return True
+
     def select_query_type(self, query_type):
         self.driver.set_combo_option(QueryStudentsLocators.QUERY_TYPE[0], QueryStudentsLocators.QUERY_TYPE[1], query_type)
 

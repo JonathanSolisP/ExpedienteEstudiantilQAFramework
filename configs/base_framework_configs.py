@@ -1,5 +1,4 @@
-__author__ = 'Proyecto'
-# -*- coding: utf-8 -*-
+# -*- coding: 850 -*-
 
 class GlobalConfigs():
     BASE_URL = "https://localhost:3000"
@@ -33,13 +32,13 @@ class GlobalConfigs():
     #QUERYPAGE
     QUERY_NAME = "Nombre"
     QUERY_IDENTIFICATION = "Cedula"
-    QUERY_HIGH_SCHOOL = "Colegio de procedencia"
+    QUERY_HIGH_SCHOOL = "Colegio de Procedencia"
     QUERY_MALE = "Masculino"
     QUERY_FEMALE = "Femenino"
     QUERY_BOTH_GENDERS = "Ambos"
-    QUERY_TENTH = u'Decimo'
+    QUERY_TENTH = u'D‚cimo'
     QUERY_ELEVENTH = u"Undecimo"
-    QUERY_TENTH_AND_ELEVENTH = 'DÃ©cimo y UndÃ©cimo'
+    QUERY_TENTH_AND_ELEVENTH = u'D‚cimo y Und‚cimo'
     QUERY_ALL = "Todos"
     QUERY_GRADUATED = "Egresado"
     QUERY_TRANSFERRED = "Trasladado"
@@ -53,9 +52,10 @@ class GlobalConfigsMessages():
     ERROR_QUERY_STUDENTS_PAGE = "Query students page was NOT displayed"
 
     #HOMEPAGE
-
     ERROR_USER_NOT_DISPLAYED = "User was not displayed in HomePage"
 
+    #Query Students
+    ERROR_QUERY_STUDENTS_FAILED = "Query was NOT successfully executed"
 
     #Create Student
     ERROR_CREATE_STUDENT_PAGE_INVALID_DATA = "The respective message was NOT displayed"
