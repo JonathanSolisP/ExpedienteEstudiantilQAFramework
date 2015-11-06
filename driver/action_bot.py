@@ -60,7 +60,8 @@ class ActionBot:
 
     def get_attribute(self, by, value, attribute):
         we = self.find_element(by, value)
-        we.get_attribute(attribute)
+        return we.get_attribute(attribute)
+
 
     def is_displayed(self, by, value):
         we = self.find_element(by, value)
