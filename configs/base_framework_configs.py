@@ -1,5 +1,5 @@
 __author__ = 'Proyecto'
-
+# -*- coding: utf-8 -*-
 
 class GlobalConfigs():
     BASE_URL = "https://localhost:3000"
@@ -25,18 +25,32 @@ class GlobalConfigs():
     MEANINGFUL_ADEQUACY = "No tiene"
     NOT_MEANINGFUL_ADEQUACY = "No tiene"
 
-
-
     USERNAME = "ranguro"
     PASSWORD = "ranguro"
 
     USER_NAME = "Randall Gonzalez"
+
+    #QUERYPAGE
+    QUERY_NAME = "Nombre"
+    QUERY_IDENTIFICATION = "Cedula"
+    QUERY_HIGH_SCHOOL = "Colegio de procedencia"
+    QUERY_MALE = "Masculino"
+    QUERY_FEMALE = "Femenino"
+    QUERY_BOTH_GENDERS = "Ambos"
+    QUERY_TENTH = u'Decimo'
+    QUERY_ELEVENTH = u"Undecimo"
+    QUERY_TENTH_AND_ELEVENTH = 'Décimo y Undécimo'
+    QUERY_ALL = "Todos"
+    QUERY_GRADUATED = "Egresado"
+    QUERY_TRANSFERRED = "Trasladado"
+
 
 class GlobalConfigsMessages():
     SELECTED_BROWSER = "Selected browser: "
     SELECTED_OPENED = "The browser has been opened"
     ERROR_HOME_PAGE = "Home page was NOT displayed"
     ERROR_CREATE_STUDENT_PAGE = "Create student page was NOT displayed"
+    ERROR_QUERY_STUDENTS_PAGE = "Query students page was NOT displayed"
 
     #HOMEPAGE
 
@@ -46,6 +60,7 @@ class GlobalConfigsMessages():
     #Create Student
     ERROR_CREATE_STUDENT_PAGE_INVALID_DATA = "The respective message was NOT displayed"
     ERROR_CREATE_STUDENT_PAGE_SUBMIT = "A problem occurred inserting the student"
+
     ERROR_ADD_RESPONSIBLE_SUBMIT = "A problem occurred adding the responsible to the student"
     MISSING_ERROR_MSG = "An error message was not diplayed"
 
