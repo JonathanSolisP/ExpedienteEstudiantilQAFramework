@@ -8,6 +8,7 @@ from configs.base_framework_configs import GlobalConfigs as GC
 from configs.base_framework_configs import GlobalConfigsMessages as GM
 import time
 
+
 class CreateStudentTestSuite(BaseTest):
 
     def go_to_page(self):
@@ -50,7 +51,7 @@ class CreateStudentTestSuite(BaseTest):
         create_student_page.select_district(GC.DISTRICT)
         create_student_page.enter_neighborhood(GC.NEIGHBORHOOD)
         create_student_page.enter_address(GC.ADDRESS)
-        create_student_page.enter_high_school(GC.HIGH_SCHOOL)
+        create_student_page.select_high_school(GC.HIGH_SCHOOL)
         create_student_page.enter_income_year(GC.INCOME_YEAR)
         create_student_page.set_graduated()
         create_student_page.select_meaningful_adequacy(GC.MEANINGFUL_ADEQUACY)
@@ -58,11 +59,3 @@ class CreateStudentTestSuite(BaseTest):
         create_student_page.click_create_student()
         view_student_page = ViewStudentPage(self.driver)
         self.assertTrue(view_student_page.is_add_responsible_button_displayed(), GM.ERROR_CREATE_STUDENT_PAGE_SUBMIT)
-"""
-    def test_just_a_test(self):
-        self.driver.get("http://172.24.28.21:3000/#!/estudiantes/56392245bf6ad92638c8a0d6")
-        view_student_page = ViewStudentPage(self.driver)
-        view_student_page.is_add_responsible_button_displayed()
-        view_student_page.click_add_responsible()
-        time.sleep(2)
-"""

@@ -34,7 +34,7 @@ class AddResponsibleOfStudentTestSuite(BaseTest):
         add_responsible_of_student_page.enter_email("jorgeperez@gmail.com")
         add_responsible_of_student_page.enter_address("Ciudad Quesada")
         add_responsible_of_student_page.click_submit_button()
-        self.assertTrue(add_responsible_of_student_page.is_header_displayed(),GM.HEADER_NOT_DISPLAYED)
+        self.assertTrue(add_responsible_of_student_page.is_header_displayed(), GM.HEADER_NOT_DISPLAYED)
 
     def test_add_responsible_of_student_empty_fields(self):
         add_responsible_of_student_page = AddResponsibleOfStudentPage(self.driver)

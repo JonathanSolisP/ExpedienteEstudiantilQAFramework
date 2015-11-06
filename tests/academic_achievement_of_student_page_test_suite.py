@@ -7,6 +7,7 @@ from page_objects.login_page.login_page import LoginPage
 from page_objects.view_student_page.view_student_page import ViewStudentPage
 from configs.base_framework_configs import GlobalConfigs as GC
 
+
 class AddAcademicAchievementStudent(BaseTest):
 
     def go_to_page(self):

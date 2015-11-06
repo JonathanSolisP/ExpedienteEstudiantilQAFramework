@@ -20,7 +20,7 @@ class GlobalConfigs():
     DISTRICT = "Cutris"
     NEIGHBORHOOD = "Terron Colorado"
     ADDRESS = "200 mts norte del puente del Rio San Carlos"
-    HIGH_SCHOOL = "Liceo Boca de Arenal"
+    HIGH_SCHOOL = "Centro Educativo Cooperativo San Carlos Borromeo"
     INCOME_YEAR = "2015"
     MEANINGFUL_ADEQUACY = "No tiene"
     NOT_MEANINGFUL_ADEQUACY = "No tiene"

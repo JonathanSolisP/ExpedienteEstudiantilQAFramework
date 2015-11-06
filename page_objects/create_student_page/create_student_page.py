@@ -82,8 +82,8 @@ class CreateStudentPage:
     def enter_address(self, address):
         self.driver.send_keys(CreateStudentLocators.ADDRESS_INPUT[0], CreateStudentLocators.ADDRESS_INPUT[1], address)
 
-    def enter_high_school(self, high_school):
-        self.driver.send_keys(CreateStudentLocators.HIGH_SCHOOL_INPUT[0], CreateStudentLocators.HIGH_SCHOOL_INPUT[1], high_school)
+    def select_high_school(self, high_school):
+        self.driver.set_combo_option(CreateStudentLocators.HIGH_SCHOOL_INPUT[0], CreateStudentLocators.HIGH_SCHOOL_INPUT[1], high_school)
 
     def enter_income_year(self, income_year):
         self.driver.send_keys(CreateStudentLocators.INCOME_YEAR_INPUT[0], CreateStudentLocators.INCOME_YEAR_INPUT[1], income_year)
