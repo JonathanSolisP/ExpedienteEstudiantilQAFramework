@@ -19,6 +19,8 @@ class HomeLocators:
     CONSULT_STUDENT_TAB = (By.CSS_SELECTOR, "a.ng-binding", 3)
     REPORTS_STUDENT_TAB = (By.CSS_SELECTOR, "a.ng-binding", 4)
 
+    FUNCTIONARY_LIST_TAB = (By.CSS_SELECTOR, "a.ng-binding", 1)
+    NEW_FUNCTIONARY_TAB = (By.CSS_SELECTOR, "a.ng-binding", 2)
 
     SIGN_UP_TAB = (By.XPATH, "//li[@class='ng-scope']//a[contains(@href, '#!/sign')]", 0)
     SIGN_IN_TAB = (By.XPATH, "//li[@class='ng-scope']//a[contains(@href, '#!/sign')]", 1)
@@ -33,9 +35,6 @@ class HomePage:
 
     def is_user_name_displayed(self,):
         return self.driver.wait_for_element_visible(HomeLocators.USERNAME[0], HomeLocators.USERNAME[1], 30)
-
-    def click_student_tab(self):
-        self.driver.click_from_elements(HomeLocators.STUDENT_TAB[0], HomeLocators.STUDENT_TAB[1], HomeLocators.STUDENT_TAB[2])
 
     def click_student_tab(self):
         self.driver.click_from_elements(HomeLocators.STUDENT_TAB[0], HomeLocators.STUDENT_TAB[1], HomeLocators.STUDENT_TAB[2])
