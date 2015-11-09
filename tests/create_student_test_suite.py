@@ -59,3 +59,10 @@ class CreateStudentTestSuite(BaseTest):
         create_student_page.click_create_student()
         view_student_page = ViewStudentPage(self.driver)
         self.assertTrue(view_student_page.is_add_responsible_button_displayed(), GM.ERROR_CREATE_STUDENT_PAGE_SUBMIT)
+
+    def test_create_student_fieldself(self):
+        self.go_to_page()
+        create_student_page = CreateStudentPage(self.driver)
+        create_student_page.click_create_student()
+        self.assertTrue(create_student_page.is_header_displayed(), GM.ERROR_CREATE_STUDENT_PAGE_INVALID_DATA)
+        time.sleep(2)

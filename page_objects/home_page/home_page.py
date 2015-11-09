@@ -45,6 +45,12 @@ class HomePage:
     def select_create_student_option(self):
         self.driver.click_from_elements(HomeLocators.CREATE_STUDENT_TAB[0], HomeLocators.CREATE_STUDENT_TAB[1], HomeLocators.CREATE_STUDENT_TAB[2])
 
+    def select_new_functionary_option(self):
+        self.driver.click_from_elements(HomeLocators.NEW_FUNCTIONARY_TAB[0], HomeLocators.NEW_FUNCTIONARY_TAB[1], HomeLocators.NEW_FUNCTIONARY_TAB[2])
+
+    def select_functionary_list_option(self):
+        self.driver.click_from_elements(HomeLocators.FUNCTIONARY_LIST_TAB[0], HomeLocators.FUNCTIONARY_LIST_TAB[1], HomeLocators.FUNCTIONARY_LIST_TAB[2])
+
     def select_display_student_in_admission_option(self):
         self.driver.click_from_elements(HomeLocators.DISPLAY_STUDENT_IN_ADMISSION_TAB[0], HomeLocators.DISPLAY_STUDENT_IN_ADMISSION_TAB[1], HomeLocators.DISPLAY_STUDENT_IN_ADMISSION_TAB[2])
 

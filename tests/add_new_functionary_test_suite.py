@@ -1,8 +1,8 @@
-from page_objects.home_page.home_page import HomePage
-from page_objects.login_page.login_page import LoginPage
 
 __author__ = 'Proyecto'
 
+from page_objects.home_page.home_page import HomePage
+from page_objects.login_page.login_page import LoginPage
 from base.base_test import BaseTest
 from page_objects.add_new_functionary_page.add_new_functionary_page import AddNewFunctionaryPage
 from configs.base_framework_configs import GlobalConfigsMessages as GM
@@ -17,8 +17,11 @@ class AddNewFunctionaryPageTest(BaseTest):
         login_page.enter_password(GC.PASSWORD)
         login_page.click_sign_in_button()
         home_page.is_user_name_displayed()
+        home_page.click_functionary_tab()
+        home_page.select_new_functionary_option()
 
     def test_add_new_functionary_successful(self):
+        self.go_to_page()
         add_new_functionary_page = AddNewFunctionaryPage(self.driver)
         add_new_functionary_page.enter_first_name("Jorge")
         add_new_functionary_page.enter_first_surname("Gomez")
@@ -36,8 +39,8 @@ class AddNewFunctionaryPageTest(BaseTest):
         add_new_functionary_page.click_save_button()
         self.assertTrue(add_new_functionary_page.is_save_new_functionary_error_message_display(),GM.MISSING_ERROR_MSG)
 
-
     def add_new_functionary_existant_functionary(self):
+        self.go_to_page()
         add_new_functionary_page = AddNewFunctionaryPage(self.driver)
         add_new_functionary_page.enter_first_name("Jorge")
         add_new_functionary_page.enter_first_surname("Gomez")
@@ -56,6 +59,8 @@ class AddNewFunctionaryPageTest(BaseTest):
         self.assertTrue(add_new_functionary_page.is_save_new_functionary_error_message_display(),GM.MISSING_ERROR_MSG)
 
     def test_add_new_functionary_empty_fields(self):
+        self.go_to_page()
         add_new_functionary_page = AddNewFunctionaryPage(self.driver)
+        add_new_functionary_page.click_save_button()
         self.assertTrue(add_new_functionary_page.is_save_new_functionary_error_message_display(),GM.MISSING_ERROR_MSG)
 

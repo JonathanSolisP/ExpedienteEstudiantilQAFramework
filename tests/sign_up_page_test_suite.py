@@ -66,3 +66,15 @@ class SignUpPageTest(BaseTest):
         sign_up_page.click_sign_up_button()
         self.assertTrue(sign_up_page.is_sign_up_error_message_display(), GM.MISSING_ERROR_MSG)
 
+    def test_sign_up(self):
+        self.go_to_sign_up_page()
+        sign_up_page = SignUpPage(self.driver)
+        sign_up_page.enter_first_name("Josue")
+        sign_up_page.enter_last_name("Morales")
+        sign_up_page.enter_email("jocampos@gmail.com")
+        sign_up_page.enter_username("jocampos")
+        sign_up_page.enter_password("jocam1994")
+        sign_up_page.click_sign_up_button()
+        home_page = HomePage(self.driver)
+        self.assertTrue(home_page.is_user_name_displayed(),GM.ERROR_USER_NOT_DISPLAYED)
+
