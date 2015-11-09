@@ -26,9 +26,9 @@ class AddAcademicAchievementStudent(BaseTest):
         self.driver.get(my_url)
         assign_grades_student_page = GradesStudentPage(self.driver)
         assign_grades_student_page.click_ngCellText()
+        #assign_grades_student_page.enter_grade("70")
         #assign_grades_student_page.enter_grade(101)
         #assign_grades_student_page.is_ngCellText_color()
-
         #self.assertEquals(assign_grades_student_page.is_ngCellText_color(), "ngCellText ng-binding")
 
         time.sleep(5)
